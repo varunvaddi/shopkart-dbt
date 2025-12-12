@@ -1,0 +1,41 @@
+version: 2
+
+models:
+
+  - name: dim_customers
+    description: "Dimension table for customers"
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_products
+    description: "Dimension table for products"
+    columns:
+      - name: product_id
+        tests:
+          - unique
+          - not_null
+
+  - name: fct_orders
+    description: "Fact table for orders"
+    columns:
+      - name: order_id
+        tests:
+          #- unique #REMOVED AS ONE ORDER CAN HAVE MULTIPLE ITEMS
+          - not_null
+      - name: customer_id
+        tests:
+          - not_null
+
+  - name: fct_shipments
+    description: "Fact table for shipments"
+    columns:
+      - name: shipment_id
+        tests:
+          - unique
+          - not_null
+      - name: order_id
+        tests:
+          - not_null
