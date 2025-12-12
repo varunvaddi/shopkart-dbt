@@ -1,9 +1,9 @@
-**📦 ShopKart Analytics – dbt Project**
+# **📦 ShopKart Analytics – dbt Project**
 
 A production-ready dbt (Data Build Tool) project for transforming raw e-commerce data from Snowflake into clean, analytics-ready dimensional models.
 This project includes staging models, marts (facts/dimensions), data quality tests, and documentation.
 
-**🚀 Project Overview**
+### **🚀 Project Overview**
 
 The goal of this project is to build a clean, scalable analytics layer on top of raw ShopKart data using dbt.
 It follows a modern data stack approach:
@@ -23,7 +23,10 @@ Documentation via dbt docs site
 (Upcoming) Incremental models + Airflow orchestration
 
 
-**🗂 Project Structure**
+### **🗂 Project Structure**
+```md
+```text
+
 shopkart/
 ├── models/
 │   ├── staging/
@@ -45,9 +48,12 @@ shopkart/
 ├── tests/
 ├── macros/
 └── profiles.yml
+```
 
-**🔧 How to Run This Project**
 
+### **🔧 How to Run This Project**
+
+``` text
 pip install dbt-snowflake
 
 source dbt-env/bin/activate
@@ -60,12 +66,13 @@ dbt test
 
 dbt docs generate
 dbt docs serve
+```
 
-**🔜 Planned Enhancements**
+### **🔜 Planned Enhancements**
 
 The next upgrades coming to the project:
 
-**✅ Incremental Models**
+#### **✅ Incremental Models**
 
 We will convert:
 
@@ -78,7 +85,7 @@ into incremental models using:\
           unique_key='order_id') }}
 
 
-**Advanced Tests**
+#### **Advanced Tests**
 
 Relationships
 
@@ -86,7 +93,7 @@ Accepted values
 
 Freshness testing
 
-**🕒 Airflow Orchestration**
+#### **🕒 Airflow Orchestration**
 
 We will schedule:
 
